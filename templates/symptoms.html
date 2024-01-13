@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Covid &mdash; Website Template by Colorlib</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='fonts/icomoon/style.css') }}"
+    />
+
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/bootstrap.min.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/jquery-ui.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/owl.carousel.min.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/owl.theme.default.min.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/owl.theme.default.min.css') }}"
+    />
+
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/jquery.fancybox.min.css') }}"
+    />
+
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/bootstrap-datepicker.css') }}"
+    />
+
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='fonts/flaticon/font/flaticon.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='fonts/flaticon-covid/font/flaticon.css') }}"
+    />
+
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/aos.css') }}"
+    />
+
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+    <div id="overlayer"></div>
+    <div class="loader">
+      <div class="spinner-border text-primary" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+    </div>
+
+    <div class="site-wrap">
+      <div class="site-mobile-menu site-navbar-target">
+        <div class="site-mobile-menu-header">
+          <div class="site-mobile-menu-close mt-3">
+            <span class="icon-close2 js-menu-toggle"></span>
+          </div>
+        </div>
+        <div class="site-mobile-menu-body"></div>
+      </div>
+
+      <header
+        class="site-navbar light js-sticky-header site-navbar-target"
+        role="banner"
+      >
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-6 col-xl-2">
+              <div class="mb-0 site-logo">
+                <a href="index.html" class="mb-0"
+                  >Covid<span class="text-primary">.</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-10 d-none d-xl-block">
+              <nav
+                class="site-navigation position-relative text-right"
+                role="navigation"
+              >
+                <ul
+                  class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block"
+                >
+                  <li>
+                    <a href="{{ url_for('index') }}" class="nav-link">Home</a>
+                  </li>
+                  <li class="has-children">
+                    <a href="prevention.html" class="nav-link">Prevention</a>
+                    <ul class="dropdown">
+                      <li><a href="#" class="nav-link">Stay at home</a></li>
+                      <li>
+                        <a href="#" class="nav-link">Keep social distancing</a>
+                      </li>
+                      <li><a href="#" class="nav-link">Wear facemasl</a></li>
+                      <li><a href="#" class="nav-link">Wash your hands</a></li>
+                      <li class="has-children">
+                        <a href="#">More Links</a>
+                        <ul class="dropdown">
+                          <li><a href="#">Menu One</a></li>
+                          <li><a href="#">Menu Two</a></li>
+                          <li><a href="#">Menu Three</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="active">
+                    <a href="symptoms.html" class="nav-link">Symptoms</a>
+                  </li>
+                  <li><a href="blog.html" class="nav-link">Blog</a></li>
+                  <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+              </nav>
+            </div>
+
+            <div
+              class="col-6 d-inline-block d-xl-none ml-md-0 py-3"
+              style="position: relative; top: 3px"
+            >
+              <a href="#" class="site-menu-toggle js-menu-toggle float-right"
+                ><span class="icon-menu h3 text-black"></span
+              ></a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="hero-v1">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-6 mr-auto text-center text-lg-left">
+              <span class="d-block subheading">Covid Symptoms</span>
+              <h1 class="heading mb-3">Symptoms</h1>
+              <p class="mb-5">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel a,
+                nulla incidunt eaque sit praesentium porro consectetur optio!
+              </p>
+            </div>
+            <div class="col-lg-6">
+              <figure class="illustration-2">
+                <img
+                  src="{{ url_for('static', filename='images/symptoms.png') }}"
+                  alt="Image"
+                  class="img-fluid"
+                />
+              </figure>
+            </div>
+            <div class="col-lg-6"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- MAIN -->
+
+      <div class="site-section bg-primary-light">
+        <div class="container">
+          <div class="row mb-5">
+            <div class="col-lg-7 mx-auto text-center">
+              <h2 class="mb-4 section-heading">
+                upload file here to check your illness
+              </h2>
+            </div>
+          </div>
+        </div>
+        <!-- Dropzone Section -->
+        <div class="frame">
+          <div class="center">
+            <form
+              action="/symptoms"
+              method="post"
+              enctype="multipart/form-data"
+              id="uploadForm"
+            >
+            <div class="dropzone-container">
+              <div class="dropzone" id="customDropzone">
+                <label for="fileInput" class="custom-label">
+                  <img style="cursor: pointer" src="http://100dayscss.com/codepen/upload.svg" class="upload-icon" />
+                  <span style="cursor: pointer" class="upload-text">Choose a file or drag it here</span>
+                </label>
+                <input type="file" class="upload-input" name="file" id="fileInput" style="display: none" />
+              </div>
+            </div>
+
+              <div class="d-flex justify-content-center mt-4">
+                <!-- <p class="mb-4"><a href="{{ url_for('result') }}" class="btn btn-primary" onclick="redirectToUpload()">Check illness</a></p> -->
+                <button type="submit" class="btn btn-primary" id="uploadButton">
+                  Check for illness
+                </button>
+                <span class="spinner-icon" style="display: none"
+                  ><i class="fa-solid fa-spinner"></i
+                ></span>
+              </div>
+            </form>
+            <!-- <p id="result">{{result}}</p> -->
+            <div
+              class="modal fade"
+              id="resultModal"
+              tabindex="-1"
+              role="dialog"
+              aria-labelledby="resultModalLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="resultModalLabel">
+                      Illness Diagnosis Result
+                    </h5>
+                    <button
+                      type="button"
+                      class="close"
+                      data-dismiss="modal"
+                      aria-label="Close"
+                    >
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body text-center">
+                    <h1 class="heading mb-3" id="result">{{result}}</h1>
+
+                    <img id="resultImage" style="max-width: 80%" />
+                  </div>
+                  <div class="modal-footer d-flex justify-content-center">
+                    <button
+                      type="button"
+                      class="btn btn-primary btn-sm"
+                      data-dismiss="modal"
+                    >
+                      Close
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- <img
+              id="uploadedImage"
+              src="{{ image_path }}"
+              style="max-width: 20%"
+            /> -->
+          </div>
+        </div>
+      </div>
+      <!-- End of Dropzone Section -->
+    </div>
+    <!-- .site-wrap -->
+
+    <script src="{{ url_for('static', filename='js/jquery-3.3.1.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery-ui.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/popper.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/owl.carousel.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.countdown.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.easing.1.3.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/aos.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.fancybox.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.sticky.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/isotope.pkgd.min.js') }}"></script>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <!-- Include Dropzone.css and Dropzone.js -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.2/min/dropzone.min.css"
+      integrity="sha384-Xq1tATfAe4tlfY5gsU9LVlVm+9g8cEWE0ISdKPhI+9D8eZ/jCr7pybBmsXyQJ8yR"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.2/min/dropzone.min.js"
+      integrity="sha384-dvU/BDd8a0s0Z0F2ByMsLe92Ij4YXLfP1wBXpnez6sBBKnAA5aX8G3xXuiUpgNUC"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      // function uploadFunction(event) {
+
+      //  }
+      // document
+      //   .getElementById("uploadButton")
+      //   .addEventListener("click", function (event) {
+      //     event.preventDefault();
+      //     document.getElementById("uploadForm").submit();
+      //   });
+      document
+        .getElementById("uploadButton")
+        .addEventListener("click", function (event) {
+          event.preventDefault();
+          var buttonContainer = document.getElementById("buttonContainer");
+          var button = document.getElementById("uploadButton");
+          var spinnerIcon = document.querySelector(".spinner-icon");
+
+          // Show the spinner icon and hide the button
+          spinnerIcon.style.display = "inline-block";
+          button.style.display = "none";
+
+          // Create a FormData object to send the file
+          var formData = new FormData(document.getElementById("uploadForm"));
+
+          // Send a POST request to the /symptoms endpoint using AJAX
+          fetch("/symptoms", {
+            method: "POST",
+            body: formData,
+          })
+            .then((response) => response.json())
+            .then((data) => {
+              document.getElementById("result").innerHTML = data.result;
+              console.log(data.result);
+              updateModalContent(data.result);
+              $("#resultModal").modal("show");
+            })
+            .catch((error) => {
+              console.error("Error:", error);
+            })
+            .finally(() => {
+              spinnerIcon.style.display = "none";
+              button.style.display = "inline-block";
+            });
+        });
+      function updateModalContent(result) {
+        // Set the color and image based on the result
+        var resultElement = document.getElementById("result");
+        resultElement.style.color =
+          result === "COVID" || result === "PNEUMONIA" ? "red" : "green";
+
+        // Set the image source based on the result
+        var imageElement = document.getElementById("resultImage");
+        if (result === "NORMAL") {
+          imageElement.src =
+            "{{ url_for('static', filename='../static/images/normal.gif') }}";
+        } else if (result === "COVID") {
+          imageElement.src =
+            "{{ url_for('static', filename='../static/images/covid.gif') }}";
+        } else if (result === "PNEUMONIA") {
+          imageElement.src =
+            "{{ url_for('static', filename='../static/images/pneumonia.gif') }}";
+        }
+      }
+    
+      document
+        .getElementById("fileInput")
+        .addEventListener("change", function () {
+          readURL(this);
+        });
+
+      function readURL(input) {
+        if (input.files && input.files[0]) {
+          var reader = new FileReader();
+
+          reader.onload = function (e) {
+            var dropzone = document.getElementById("customDropzone");
+            //dropzone.style.backgroundImage = "none";
+            dropzone.style.backgroundImage = "url(" + e.target.result + ")";
+            dropzone.style.backgroundSize = "contain";
+            dropzone.style.border = "none";
+            dropzone.style.padding = "0";
+          };
+
+          reader.readAsDataURL(input.files[0]);
+        }
+      }
+      // Dropzone.autoDiscover = false;
+      // $(document).ready(function () {
+      //   var myDropzone = new Dropzone("#myDropzone", {
+      //     paramName: "file",
+      //     maxFilesize: 2, // MB
+      //     acceptedFiles: ".png, .jpg, .jpeg",
+      //     addRemoveLinks: true,
+      //     init: function () {
+      //       this.on("success", function (file, response) {
+      //         // Display the uploaded image
+      //         var uploadedImagesDiv = document.getElementById("uploadedImages");
+      //         var img = document.createElement("img");
+      //         img.src = response.url;
+      //         img.classList.add("img-thumbnail", "mr-2", "mb-2");
+      //         uploadedImagesDiv.appendChild(img);
+      //       });
+      //       this.on("addedfile", function (file) {
+      //   // Disable readURL for Dropzone uploads
+      //   document.getElementById("customDropzone").style.backgroundImage = "none";
+      // });
+      //     },
+          
+      //   });
+      // });
+    </script>
+  </body>
+</html>
