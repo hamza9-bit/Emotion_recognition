@@ -26,7 +26,7 @@ emotion_model = model_from_json(loaded_model_json)
 # load weights into new model
 emotion_model.load_weights("model/emotion_model.h5")
 def preprocess_image(img_path):
-    img = Image.open(img_path)  # Use Image module from Pillow
+    img = Image.open(img_path).convert('L')  # Use Image module from Pillow
     img = img.resize((48, 48))
     img = image.img_to_array(img)
     img = np.expand_dims(img, axis=0)
@@ -100,7 +100,7 @@ def VideoRecognition():
             while True:
                 # Find haar cascade to draw bounding box around face
                 ret, frame = cap.read()
-                frame = cv2.resize(frame, (1280, 720))
+                frame = cv2.resize(frame, (940, 540))
                 if not ret:
                     break
                 face_detector = cv2.CascadeClassifier('haarcascades/haarcascade_frontalface_default.xml')
